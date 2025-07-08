@@ -23,5 +23,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
         Route::get('/posts', function () {
             return view('admin.posts.index');
         })->name('posts.index');
+
+        Route::get('/admin/comments', function () {
+        return view('admin.comments.index');
+    })->name('admin.comments.index');
     });
 });
